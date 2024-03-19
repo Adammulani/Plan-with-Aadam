@@ -4,14 +4,14 @@ function Tours({tours,removeTour})
 {
 
     return (
-        <div>
+        <div className="container">
             <div>
-            <h2>Plan with love</h2>
+            <h2 className="title">Plan With love</h2>
             </div>
-            <div>
+            <div className="cards">
                 {
                     tours.map((tour)=>{
-                        return <Card {...tour} removeTour={removeTour}></Card>
+                        return <Card key={tour.id} {...tour} removeTour={removeTour}></Card>
                     })
                 }
             </div>
